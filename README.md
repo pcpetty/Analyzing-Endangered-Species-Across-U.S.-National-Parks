@@ -1,81 +1,96 @@
 # Analyzing Endangered Species Across U.S. National Parks
 
-## Introduction
+## Project Overview
 
-### Objective
-This project focuses on analyzing the distribution of endangered species across various U.S. national parks. By examining patterns in species conservation statuses, we aim to identify parks and species categories that are at the highest risk. Our analysis will use data on species observations and conservation statuses, applying statistical and machine learning techniques to draw insights and predictions about species endangerment.
+This project aims to analyze the distribution of endangered species across various U.S. national parks. By examining patterns in species conservation statuses, we can identify parks and species categories that are at the highest risk. Using data on species observations and conservation statuses, we apply statistical and machine learning techniques to gain insights and make predictions about species endangerment.
 
-### Dataset Overview
-We use two primary datasets in this project:
+## Objectives
 
-- **Species Information Dataset:** Contains data on species names, categories (e.g., Mammals, Birds), and their conservation status (e.g., Endangered, Threatened).
-- **Observations Dataset:** Contains data on species observations in different national parks, detailing the park name and observation count for each species.
-
-### Key Questions
-1. Which national parks have the highest concentration of endangered species?
-2. Are there specific species categories (e.g., Mammals, Birds) that are more likely to be endangered?
-3. Can we predict the conservation status of a species using features like species type and observation count?
-
----
-
-## Project Objectives
-
-- **Leverage Jupyter Notebook** to effectively communicate findings.
 - **Analyze and visualize data** related to species conservation statuses in national parks.
-- **Apply machine learning models** to predict species endangerment and assess their performance.
-- **Develop actionable insights** that could support biodiversity conservation efforts.
+- **Identify parks and species categories** that are most at risk of endangerment.
+- **Predict conservation statuses** using machine learning models based on species and observation data.
+- **Provide actionable insights** to support biodiversity conservation efforts.
 
----
+## Datasets
 
-## Understanding the Data
+This analysis utilizes two primary datasets provided by the National Parks Service:
 
-We begin by examining the dataset provided by the National Parks Service. The data includes information on various species, their conservation statuses, and the number of observations recorded across different national parks. Our initial focus is on cleaning and preparing the data to ensure accuracy in the subsequent analysis.
+1. **Species Information Dataset:** 
+    - Contains data on species names, categories (e.g., Mammals, Birds), and their conservation status (e.g., Endangered, Threatened).
+    - Used to understand the types and statuses of species found in national parks.
+2. **Observations Dataset:** 
+    - Contains data on species observations in different national parks, detailing park names and the number of observations for each species.
+    - Used to quantify the presence and frequency of different species in various parks.
 
----
+## Key Questions
 
-## Data Cleaning and Wrangling
+1. **Which national parks have the highest concentration of endangered species?**
+2. **Are there specific species categories (e.g., Mammals, Birds) that are more likely to be endangered?**
+3. **Can we predict the conservation status of a species using features like species type and observation count?**
 
-Data cleaning is crucial for ensuring the reliability of our analysis. We addressed missing values in the `conservation_status` column by filling them with "No Intervention," reflecting species that are not currently under conservation watch. Additionally, we standardized text data in the `common_names` column to avoid discrepancies and ensure consistency throughout the dataset.
+## Methodology
 
----
+1. **Data Cleaning and Preparation:**
+    - Addressed missing values in the `conservation_status` column by filling them with "No Intervention."
+    - Standardized text data to ensure consistency in species names and categories.
 
-## Exploratory Data Analysis (EDA)
+2. **Exploratory Data Analysis (EDA):**
+    - Visualized the distribution of conservation statuses across national parks using bar charts and heatmaps.
+    - Analyzed correlations between species categories and conservation status using contingency tables and Chi-square tests.
 
-### 1. Distribution of Conservation Statuses Across Parks
-- **Heatmap Visualization:** A heatmap visualizes the proportion of different conservation statuses across national parks. The visualization indicates that certain parks have a higher concentration of endangered species, suggesting the need for focused conservation efforts.
+3. **Machine Learning Models:**
+    - Implemented logistic regression to predict the likelihood of a species being endangered based on features like species category and observation count.
+    - Developed decision tree and random forest classifiers to predict conservation statuses and evaluated model performance using confusion matrices and F1 scores.
 
-### 2. Correlations Between Species Categories and Conservation Status
-- **Contingency Table and Chi-Square Test:** A contingency table shows the counts of different species categories across each conservation status. The Chi-square test results reveal a strong association between species categories and their conservation statuses, suggesting that the type of species significantly influences its likelihood of being endangered.
+4. **Feature Engineering:**
+    - Created interaction features by combining existing variables to capture more complex relationships.
+    - Assessed the impact of these features on model performance.
 
----
+## Key Findings
 
-## Machine Learning Analysis
+1. **Park-Specific Conservation Needs:**
+    - Certain national parks have a disproportionately high number of endangered species, indicating areas where conservation efforts should be focused.
 
-### 1. Logistic Regression
-Using logistic regression, we predict the likelihood of a species being endangered based on features like species category and observation count. This model helps us understand the key factors contributing to species endangerment.
+2. **Species Categories and Risk:**
+    - Categories like Mammals and Birds are more represented in the endangered and threatened categories, suggesting higher vulnerability.
 
-### 2. Decision Tree and Random Forest Classifiers
-These models are implemented to predict the conservation status of species. They provide insights into the most influential features, such as species type and park location, in determining conservation status. The model's performance is evaluated using a confusion matrix.
-
----
-
-## Feature Engineering
-
-To enhance our models, we explored interaction features by combining existing variables to capture more complex relationships. Although these features did not significantly improve model performance, the exercise demonstrated the potential for deeper insights through advanced feature engineering techniques.
-
----
+3. **Predictive Modeling Insights:**
+    - Models successfully predicted species conservation statuses, with species type and observation count being significant predictors.
 
 ## Conclusion
 
-This project provided valuable insights into the biodiversity and conservation efforts within U.S. national parks. Our analysis identified key parks and species categories that require attention, while our models successfully predicted species endangerment with high accuracy. Future work could explore additional data sources or more advanced modeling techniques to further refine these predictions.
-
----
+This project provides valuable insights into the biodiversity and conservation needs of U.S. national parks. By identifying the parks and species categories most at risk, this analysis can help guide conservation priorities and resource allocation. Future work could include the incorporation of time-series data and environmental variables to enhance predictive accuracy and further refine conservation strategies.
 
 ## Next Steps
 
-Looking ahead, there are several opportunities to extend this analysis:
+1. **Incorporate Time-Series Data:** Analyze trends in species conservation statuses over time to identify emerging threats.
+2. **Expand the Feature Set:** Include additional environmental factors, such as climate data and habitat characteristics.
+3. **Explore Advanced Models:** Apply ensemble methods or deep learning models for more sophisticated predictions and insights.
 
-- **Incorporating Time-Series Data:** Analyzing trends in species conservation statuses over time to identify emerging threats.
-- **Expanding the Feature Set:** Including environmental factors such as climate and habitat data to improve model accuracy.
-- **Exploring Other Algorithms:** Applying ensemble methods or deep learning models for more sophisticated predictions.
+## Installation and Usage
+
+1. Clone this repository to your local machine:
+    ```bash
+    git clone https://github.com/yourusername/your-repo-name.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo-name
+    ```
+3. Install the necessary dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Open the Jupyter Notebook to explore the analysis:
+    ```bash
+    jupyter notebook National-Park-Endangered-Species-Analysis.ipynb
+    ```
+
+## Contributions
+
+Feel free to fork this repository and submit a pull request if you have any improvements or new features to suggest. For major changes, please open an issue to discuss what you would like to contribute.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
