@@ -71,11 +71,11 @@ This project provides valuable insights into the biodiversity and conservation n
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/pcpetty/Analyzing-Endangered-Species-Across-U.S.-National-Parks .git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd Analyzing-Endangered-Species-Across-U.S.-National-Parks 
     ```
 3. Install the necessary dependencies:
     ```bash
@@ -86,11 +86,6 @@ This project provides valuable insights into the biodiversity and conservation n
     jupyter notebook National-Park-Endangered-Species-Analysis.ipynb
     ```
 
-## Contributions
-
-Feel free to fork this repository and submit a pull request if you have any improvements or new features to suggest. For major changes, please open an issue to discuss what you would like to contribute.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
